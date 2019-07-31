@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //This is the logic for the pause watch
+
     public void pauseChronometer(View v) {
         if (running) {
             chronometer.stop();
