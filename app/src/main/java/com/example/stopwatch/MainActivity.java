@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
 
-        chronometer.setFormat("Time: %s");
+        chronometer.setFormat("Stop Watch: %s");
     }
 
+    //This is the logic for the stop watch
     public void startChronometer(View v) {
         if (!running) {
             chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
