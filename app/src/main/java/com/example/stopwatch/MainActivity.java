@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
         AppCenter.start(getApplication(), "9d531afe-635d-4bed-b88f-3385415566ee",
                 Analytics.class, Crashes.class);
 
+        //To track a simple event simply use the trackEvent()
+        Analytics.trackEvent("My custom event");
+
         chronometer = findViewById(R.id.chronometer);
 
-        chronometer.setFormat("Stop Watch: %s");
+        chronometer.setFormat("Stop WatchGO: %s");
     }
 
     //This is the logic for the stop watch
