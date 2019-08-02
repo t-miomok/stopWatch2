@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     //This is the logic for the stop watch
     public void startChronometer(View v) {
+        Analytics.trackEvent("Start button clicked");
         if (!running) {
             chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
             chronometer.start();
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     //This is the logic for the pause watch
 
     public void pauseChronometer(View v) {
+        Analytics.trackEvent("Pause button clicked");
         if (running) {
             chronometer.stop();
             pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetChronometer(View v) {
+        Analytics.trackEvent("Reset button clicked");
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;
     }
