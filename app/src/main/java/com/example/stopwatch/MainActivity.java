@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         chronometer = findViewById(R.id.chronometer);
         chronometer.setFormat("Stop WatchGO: %s");
   //      Distribute.isEnabled();
-       throw new RuntimeException("This is a crash");
+
 
     }
 
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         Analytics.trackEvent("Reset button clicked");
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;
+        throw new RuntimeException("This is a crash");
     }
 
 }
