@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
 
+        //To distribute SDK
+        AppCenter.start(getApplication(), "{9d531afe-635d-4bed-b88f-3385415566ee}", Analytics.class, Crashes.class);
+
         chronometer.setFormat("Stop WatchGO: %s");
         throw new RuntimeException("This is a crash");
     }
