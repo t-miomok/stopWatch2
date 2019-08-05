@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         AppCenter.start(getApplication(), "9d531afe-635d-4bed-b88f-3385415566ee",
                 Analytics.class, Crashes.class);
 
+        //TO distribute
+        AppCenter.start(getApplication(), "{9d531afe-635d-4bed-b88f-3385415566ee}", Distribute.class);
         //To track a simple event simply use the trackEvent()
         Analytics.trackEvent("My custom event");
-
         chronometer = findViewById(R.id.chronometer);
-
         chronometer.setFormat("Stop WatchGO: %s");
-        Distribute.isEnabled();
+  //      Distribute.isEnabled();
 //        throw new RuntimeException("This is a crash");
 
     }
