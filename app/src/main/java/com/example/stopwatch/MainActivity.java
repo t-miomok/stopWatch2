@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         chronometer = findViewById(R.id.chronometer);
 
         chronometer.setFormat("Stop WatchGO: %s");
+        throw new RuntimeException("This is a crash");
     }
 
     //This is the logic for the stop watch
@@ -69,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;
     }
-
 
 
 }
