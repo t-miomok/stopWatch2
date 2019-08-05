@@ -69,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
         Analytics.trackEvent("Reset button clicked");
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;
-        throw new RuntimeException("This is a crash");
+//        throw new RuntimeException("This is a crash");
+        Crashes.generateTestCrash();
     }
+
+
 
 }
