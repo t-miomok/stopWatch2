@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         chronometer.setFormat("Stop WatchGO: %s");
         Distribute.isEnabled();
-        throw new RuntimeException("This is a crash");
-
+//        throw new RuntimeException("This is a crash");
 
     }
 
